@@ -180,20 +180,17 @@ input::-webkit-inner-spin-button {
 }
 
 :root {
-    /*--input-color: #99a3ba;*/
     --input-color: black;
-    --input-border: #275efe;
+    --input-border: rgb(32, 141, 232);
     --input-background: rgba(255, 255, 255, 0.1);
     --input-placeholder: #cbd1dc;
     --input-border-focus: #cdd9ed;
     --group-color: var(--input-color);
     --group-border: var(--input-border);
-    /*--group-background: #eef4ff;*/
     --group-background: rgba(255, 255, 255, 0.5);
     --group-color-focus: black;
     --group-border-focus: var(--input-border-focus);
-    /*--group-background-focus: #678efe;*/
-    --group-background-focus: var(--group-background);
+    --group-background-focus: rgba(255, 255, 255, 0.8);
 }
 .form-field {
     display: block;
