@@ -142,17 +142,17 @@ window.onload = function () {
         level = localStorage["level"];
     }
 
-    document.getElementById("input-width").addEventListener("keyup", function(event) {
+    document.getElementById("input-width").addEventListener("keydown", function(event) {
         if (event.keyCode === 13) {
             reset();
         }
     });
-    document.getElementById("input-height").addEventListener("keyup", function(event) {
+    document.getElementById("input-height").addEventListener("keydown", function(event) {
         if (event.keyCode === 13) {
             reset();
         }
     });
-    document.getElementById("input-level").addEventListener("keyup", function(event) {
+    document.getElementById("input-level").addEventListener("keydown", function(event) {
         if (event.keyCode === 13) {
             reset();
         }
