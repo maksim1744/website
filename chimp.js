@@ -19,7 +19,7 @@ function enableButtons() {
     document.getElementById("info-holder").style.visibility = "visible";
 }
 
-function tryAgain() {
+function reset() {
     if (document.getElementById("input-width").value != "") {
         width = parseInt(document.getElementById("input-width").value);
     }
@@ -141,6 +141,22 @@ window.onload = function () {
     if (localStorage["level"]) {
         level = localStorage["level"];
     }
+
+    document.getElementById("input-width").addEventListener("keyup", function(event) {
+        if (event.keyCode === 13) {
+            reset();
+        }
+    });
+    document.getElementById("input-height").addEventListener("keyup", function(event) {
+        if (event.keyCode === 13) {
+            reset();
+        }
+    });
+    document.getElementById("input-level").addEventListener("keyup", function(event) {
+        if (event.keyCode === 13) {
+            reset();
+        }
+    });
 
     resetBoard();
 };
