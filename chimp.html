@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chimp</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="chimp.js"></script>
+</head>
+<body>
+    <div class="h-table">
+        <div id="table"></div>
+    </div>
+
+    <div class="h-info-holder" id="info-holder">
+        <button class="h-button" id="try-again-button" onclick="tryAgain()">Try again</button>
+
+        <div style="overflow: hidden; width: 450px; margin: auto; margin-top: 10px;">
+            <div id="inner">
+                <div class="form-group">
+                    <span>Width</span>
+                    <input class="form-field" type="number" min="1" max="999"
+                           oninput="validity.valid||(value=value.substring(0, value.length-1));"
+                           id="input-width">
+                </div>
+                <div class="form-group">
+                    <span>Height</span>
+                    <input class="form-field" type="number" min="1" max="999"
+                           oninput="validity.valid||(value=value.substring(0, value.length-1));"
+                           id="input-height">
+                </div>
+                <div class="form-group">
+                    <span>Level</span>
+                    <input class="form-field" type="number" min="1" max="9999"
+                           oninput="validity.valid||(value=value.substring(0, value.length-1));"
+                           id="input-level">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
