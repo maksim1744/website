@@ -1,5 +1,5 @@
 body {
-    background: rgb(32, 141, 232);
+    background: rgba(32, 141, 232, 0.2);
 }
 
 * {
@@ -28,6 +28,7 @@ input::-webkit-inner-spin-button {
     align-items: center;
     -webkit-box-pack: center;
     justify-content: center;
+    cursor: auto;
 }
 
 .h-line {
@@ -43,6 +44,7 @@ input::-webkit-inner-spin-button {
     outline: 0;
     box-sizing: border-box;
     display: flex;
+    cursor: auto;
 }
 
 .h-number-cell {
@@ -57,7 +59,8 @@ input::-webkit-inner-spin-button {
     height: 80px;
     margin: 5px;
     border-radius: 10px;
-    border: 5px solid rgba(255, 255, 255, 0.3);
+    border: 5px solid rgba(255, 255, 255, 1);
+    background: rgba(32, 141, 232, 0.3);
     font-size: 50px;
     text-align: center;
     display: flex;
@@ -70,7 +73,7 @@ input::-webkit-inner-spin-button {
 }
 
 .h-number-cell:hover {
-    border: 5px solid rgba(255, 255, 255, 0.8);
+    border: 5px solid rgba(32, 141, 232, 0.3);
 }
 
 .h-empty-cell {
@@ -88,12 +91,11 @@ input::-webkit-inner-spin-button {
     height: 80px;
     margin: 5px;
     border-radius: 10px;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.3);
 }
 
 .h-white-cell {
     cursor: pointer;
-    color: white;
     user-select: none;
     padding: 0;
     font-weight: 400;
@@ -103,7 +105,7 @@ input::-webkit-inner-spin-button {
     height: 80px;
     margin: 5px;
     border-radius: 10px;
-    border: 5px solid rgba(255, 255, 255, 0.1);
+    border: 5px solid rgba(32, 141, 232, 0.3);
     font-size: 50px;
     text-align: center;
     display: flex;
@@ -113,13 +115,12 @@ input::-webkit-inner-spin-button {
     -webkit-box-pack: center;
     justify-content: center;
     line-height: 1;
-    background: white;
+    background: rgba(32, 141, 232, 0.3);
+    color: rgba(0, 0, 0, 0);
 }
 
 .h-white-cell:hover {
-    color: rgb(200, 200, 200);
-    background: rgb(200, 200, 200);
-    border: rgb(200, 200, 200);
+    border: 5px solid rgb(255, 255, 255);
 }
 
 .h-button {
@@ -181,10 +182,10 @@ input::-webkit-inner-spin-button {
 
 :root {
     --input-color: black;
-    --input-border: rgb(32, 141, 232);
+    --input-border: rgb(32, 141, 232, 0.2);
     --input-background: rgba(255, 255, 255, 0.1);
     --input-placeholder: #cbd1dc;
-    --input-border-focus: #cdd9ed;
+    --input-border-focus: rgb(32, 141, 232, 1);
     --group-color: var(--input-color);
     --group-border: var(--input-border);
     --group-background: rgba(255, 255, 255, 0.5);
@@ -259,4 +260,49 @@ input::-webkit-inner-spin-button {
     color: var(--group-color-focus);
     background: var(--group-background-focus);
     border-color: var(--group-border-focus);
+}
+
+
+
+
+
+.large-cell {
+    width: 120px;
+    height: 120px;
+    cursor: auto;
+    position: relative;
+}
+
+.chip-box {
+    width: 105px;
+    height: 105px;
+    position: relative;
+    cursor: auto;
+}
+.chip {
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.small-chip {
+    height: 60px;
+    width: 60px;
+}
+.medium-chip {
+    height: 80px;
+    width: 80px;
+}
+.large-chip {
+    height: 100px;
+    width: 100px;
+}
+.red-chip {
+    background: rgb(200, 0, 0);
+}
+.blue-chip {
+    background: rgb(0, 0, 200);
 }

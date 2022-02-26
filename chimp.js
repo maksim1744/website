@@ -141,6 +141,7 @@ window.onload = function () {
     if (localStorage["level"]) {
         level = localStorage["level"];
     }
+    console.log("hi");
 
     document.getElementById("input-width").addEventListener("keydown", function(event) {
         if (event.keyCode === 13) {

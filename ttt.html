@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-tac-toe</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="ttt.js"></script>
+</head>
+<body>
+
+    <div class="h-table">
+        <div id="computer-chips">
+            <div class="h-line">
+                <div class="chip-box">
+                    <div class="chip small-chip red-chip" draggable="true" id="cchip-0"></div>
+                </div>
+                <div class="chip-box">
+                    <div class="chip small-chip red-chip" draggable="true" id="cchip-1"></div>
+                </div>
+                <div class="chip-box">
+                    <div class="chip medium-chip red-chip" draggable="true" id="cchip-2"></div>
+                </div>
+                <div class="chip-box">
+                    <div class="chip medium-chip red-chip" draggable="true" id="cchip-3"></div>
+                </div>
+                <div class="chip-box">
+                    <div class="chip large-chip red-chip" draggable="true" id="cchip-4"></div>
+                </div>
+                <div class="chip-box">
+                    <div class="chip large-chip red-chip" draggable="true" id="cchip-5"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="h-table">
+        <div id="board">
+            <div class="h-line">
+                <div class="h-empty-cell large-cell" id="c00" ondrop="drop_handler(event, this)" ondragover="dragover_handler(event)"></div>
+                <div class="h-empty-cell large-cell" id="c01" ondrop="drop_handler(event, this)" ondragover="dragover_handler(event)"></div>
+                <div class="h-empty-cell large-cell" id="c02" ondrop="drop_handler(event, this)" ondragover="dragover_handler(event)"></div>
+            </div>
+            <div class="h-line">
+                <div class="h-empty-cell large-cell" id="c10" ondrop="drop_handler(event, this)" ondragover="dragover_handler(event)"></div>
+                <div class="h-empty-cell large-cell" id="c11" ondrop="drop_handler(event, this)" ondragover="dragover_handler(event)"></div>
+                <div class="h-empty-cell large-cell" id="c12" ondrop="drop_handler(event, this)" ondragover="dragover_handler(event)"></div>
+            </div>
+            <div class="h-line">
+                <div class="h-empty-cell large-cell" id="c20" ondrop="drop_handler(event, this)" ondragover="dragover_handler(event)"></div>
+                <div class="h-empty-cell large-cell" id="c21" ondrop="drop_handler(event, this)" ondragover="dragover_handler(event)"></div>
+                <div class="h-empty-cell large-cell" id="c22" ondrop="drop_handler(event, this)" ondragover="dragover_handler(event)"></div>
+            </div>
+        </div>
+    </div>
+    <div class="h-table">
+        <div id="player-chips">
+            <div class="h-line">
+                <div class="chip-box">
+                    <div class="chip small-chip blue-chip" draggable="true" id="pchip-0"></div>
+                </div>
+                <div class="chip-box">
+                    <div class="chip small-chip blue-chip" draggable="true" id="pchip-1"></div>
+                </div>
+                <div class="chip-box">
+                    <div class="chip medium-chip blue-chip" draggable="true" id="pchip-2"></div>
+                </div>
+                <div class="chip-box">
+                    <div class="chip medium-chip blue-chip" draggable="true" id="pchip-3"></div>
+                </div>
+                <div class="chip-box">
+                    <div class="chip large-chip blue-chip" draggable="true" id="pchip-4"></div>
+                </div>
+                <div class="chip-box">
+                    <div class="chip large-chip blue-chip" draggable="true" id="pchip-5"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="h-info-holder">
+        <div>
+            <p style="color: black; font-size: 40px" id="status-text">Your move</p>
+        </div>
+        <div>
+            <button class="h-button" style="width: 250px" id="reset-button" onclick="reset()">Reset</button>
+            <button class="h-button" style="width: 250px" id="change-player-button" onclick="changePlayer()">Change player</button>
+        </div>
+    </div>
+    <div style="position: absolute; top: 0; right: 0">
+      <input type="radio" id="strategyChoice1"
+       name="strategy" value="optimal" checked="true">
+      <label for="strategyChoice1">Optimal strategy</label><br>
+
+      <input type="radio" id="strategyChoice2"
+       name="strategy" value="random">
+      <label for="strategyChoice2">Random strategy</label><br>
+    </div>
+</body>
+</html>
