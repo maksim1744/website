@@ -7,8 +7,15 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
     <script src="ttt.js"></script>
 </head>
+<nav>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="chimp">Chimp test</a></li>
+      <li><a href="ttt" class="active">Tic-tac-toe</a></li>
+      <li><a href="https://github.com/maksim1744/website">About</a></li>
+    </ul>
+</nav>
 <body>
-
     <div class="h-table">
         <div id="computer-chips">
             <div class="h-line">
@@ -85,7 +92,7 @@
             <button class="h-button" style="width: 250px" id="change-player-button" onclick="changePlayer()">Change player</button>
         </div>
     </div>
-    <div style="position: absolute; top: 0; right: 0">
+    <div style="position: absolute; top: 60px; right: 20px">
       <input type="radio" id="strategyChoice1"
        name="strategy" value="optimal" checked="true">
       <label for="strategyChoice1">Optimal strategy</label><br>

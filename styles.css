@@ -306,3 +306,36 @@ input::-webkit-inner-spin-button {
 .blue-chip {
     background: rgb(0, 0, 200);
 }
+
+
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: #666;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background: rgba(32, 141, 232, 0.2);
+}
+
+li a.active {
+    color: white;
+    background: rgba(32, 141, 232, 0.6);
+}
