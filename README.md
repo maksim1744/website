@@ -4,7 +4,7 @@ This is a repository with some `html`/`js`/`css` files for my personal website h
 ## Subpages
 ### [Chimp test](http://maksim1744.ru/chimp)
 Title comes from [this](https://www.youtube.com/watch?v=zsXP8qeFF6A) video.
-You need to remember positions of all numbers and then click then in order starting from 1.
+You need to remember positions of all numbers and then click them in order starting from 1.
 In comparison with other similar online tests, here you can set any size of the field and any number of hidden cells.
 Written completely in `js`.
 ### [Tic-tac-toe](http://maksim1744.ru/ttt)
